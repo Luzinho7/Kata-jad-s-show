@@ -25,6 +25,7 @@ public class TheaterShow extends Show {
         return Collections.unmodifiableList(this.actors);
     }
 
+
     @Override
     public void watchedby(Spectator spectator) {
         spectator.watch(this);

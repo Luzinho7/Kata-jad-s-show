@@ -33,14 +33,14 @@ public class Spectator implements ISpectator {
     }
 
     public void watch(final StreetShow show) {
-
+        System.out.println("J'ai assisté au spectacle de rue"+show.getName()+"Il y avait :");
     }
 
     public void watch(final TheaterShow show) {
-
+        System.out.println("J'ai assisté à la pièce de théâtre"+show.getName()+"de"+show.getDirector()+"Il y avait :");
     }
 
     public void watch(final ConcertShow show) {
-
+        System.out.println("J'ai assisté au concert"+show.getName()+"de"+show.getArtist());
     }
 }
