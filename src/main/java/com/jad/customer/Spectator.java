@@ -2,6 +2,8 @@ package com.jad.customer;
 
 import com.jad.show.*;
 
+import java.util.List;
+
 public class Spectator implements ISpectator {
     private final String firstName;
     private final String lastName;
@@ -34,10 +36,17 @@ public class Spectator implements ISpectator {
 
     public void watch(final StreetShow show) {
         System.out.println("J'ai assisté au spectacle de rue"+show.getName()+"Il y avait :");
+        for (String performer : show.getPerformers()) {
+            System.out.println(performer);
+        }
+
     }
 
     public void watch(final TheaterShow show) {
-        System.out.println("J'ai assisté à la pièce de théâtre"+show.getName()+"de"+show.getDirector()+"Il y avait :");
+        System.out.println("J'ai assisté à la pièce de théâtre " +show.getName()+ " de " +show.getDirector()+ " Il y avait : x²");
+        for (String actor : show.getActors()) {
+            System.out.println(actor);
+        }
     }
 
     public void watch(final ConcertShow show) {
